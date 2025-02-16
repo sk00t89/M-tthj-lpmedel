@@ -1,0 +1,122 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.select-menu {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.inputform {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Två kolumner */
+    gap: 1rem;
+    width: 70vw;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+}
+.inputform input {
+    border: 2px solid darkslategrey;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+}
+.btnDiv {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+p, button, li {
+    font-size: 18px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.generera-btn {
+    background-color: darkslategray;
+    color: white;
+}
+.rensa-btn {
+    background-color: crimson;
+    color: white;
+}
+button:hover {
+    opacity: 0.8;
+}
+.måttlista {
+    counter-reset: list-counter;
+    padding-left: 0px;
+}
+.måttlista li {
+    counter-increment: list-counter;
+    text-align: center;
+    display: flex;
+    width: 70vw;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+måttlista li::before {
+    content: counter(list-counter) ". ";
+    font-weight: bold;
+    margin-right: 10px;
+    position: absolute;
+    left: 10px;
+}
+.måttlista input {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+.remove-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+    .inputform {
+        grid-template-columns: 1fr;
+    }
+}

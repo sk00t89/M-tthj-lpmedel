@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Måtthjälpmedel</title>
+</head>
+<body>
+
+<h1>Måtthjälpmedel</h1>
+
+<div class="option-list">
+    <select id="select-menu" class="select-menu">
+        <option value="40" selected>40 mm Profil (standard)</option>
+        <option value="45">45 mm Profil (45 tak, resten 30)</option>
+        <option value="30" >30 mm Profil (30 alla sidor)</option>
+    </select>
+</div>
+
+<form class="inputform" id="inputform">
+    <div class="inputform">
+        <div class="input-group">
+            <label for="takmått">Takmått</label>
+            <input type="text" id="takmått">
+        </div>
+        <div class="input-group">
+            <label for="vänster-vägg">Vänster vägg</label>
+            <input type="text" id="vänster-vägg">
+        </div>
+        <div class="input-group">
+            <label for="höger-vägg">Höger vägg</label>
+            <input type="text" id="höger-vägg">
+        </div>
+        <div class="input-group">
+            <label for="botten">Botten</label>
+            <input type="text" id="botten">
+        </div>
+    </div>
+
+</form>
+
+<div class="btnDiv">
+    <button class="generera-btn" id="generera-btn">Generera kapmått</button>
+    <button class="rensa-btn" id="rensa-btn">Rensa</button>
+</div>
+
+<div class="outputDiv" id="outputDiv">
+
+    <ol class="måttlista" id="måttlista">
+        <li><span><input type="checkbox"></span>takmått: 342, väggmått: 434, osv<span><button class="remove-btn">ta bort</button></span></li>
+        <li><span><input type="checkbox"></span>takmått: 342, väggmått: 434, osv<span><button class="remove-btn">ta bort</button></span></li>
+    </ol>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
