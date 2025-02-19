@@ -1,3 +1,29 @@
+@media (max-width: 600px) { /* Anpassa för mobil */
+    .måttLista li {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .checkbox {
+        order: -1; /* Flytta checkbox högst upp */
+    }
+
+    .index {
+        order: 0; /* Håll index bredvid checkbox */
+    }
+
+    .mått {
+        width: 100%; /* Låt mått breddas istället för att gå utanför */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .remove-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
 /* Generella stilregler */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -118,12 +144,14 @@ h1 {
 
 .måttLista li {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    width: 70vw;
-    background-color: white;
+    width: 100%;
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
+    background-color: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .måttLista .left-section {
@@ -163,11 +191,7 @@ h1 {
     font-size: 14px;
 }
 
-/* Media query */
-@media only screen and (max-width: 600px) {
-    .inputform {
-        grid-template-columns: 1fr;
-    }
+
 }
 .btnDiv {
     display: flex;
