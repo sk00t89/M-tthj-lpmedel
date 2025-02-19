@@ -1,29 +1,48 @@
-@media (max-width: 600px) { /* Anpassa för mobil */
-    .måttLista li {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-    }
 
-    .checkbox {
-        order: -1; /* Flytta checkbox högst upp */
-    }
+    @media only screen and (max-width: 600px) { /* Anpassa för mobil */
+        body {
+            background-color: black; /* Nu fungerar bakgrundsfärgen */
+        }
 
-    .index {
-        order: 0; /* Håll index bredvid checkbox */
-    }
+        .måttLista li {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
 
-    .mått {
-        width: 100%; /* Låt mått breddas istället för att gå utanför */
-        display: flex;
-        justify-content: space-between;
-    }
+        .mått-container {
+            flex: 1; /* Tar upp all plats mellan vänster och höger */
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap; /* Gör så att elementen bryter rad om det behövs */
+            gap: 5px; /* Avstånd mellan mått */
+        }
 
-    .remove-btn {
-        width: 100%;
-        margin-top: 5px;
+        .checkbox {
+            order: -1; /* Flytta checkbox högst upp */
+        }
+
+        .index {
+            order: 0; /* Håll index bredvid checkbox */
+        }
+
+        .mått {
+            width: 100%; /* Låt mått breddas istället för att gå utanför */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .remove-btn {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .btnDiv {
+            display: flex;
+            gap: 5px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
     }
-}
 /* Generella stilregler */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -158,14 +177,14 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px; /* Skapar avstånd mellan checkbox och index */
-    min-width: 60px; /* Förhindrar att de hoppar runt */
+    min-width: 30px; /* Förhindrar att de hoppar runt */
 }
 .mått-container {
     flex: 1; /* Tar upp all plats mellan vänster och höger */
     text-align: right;
     display: flex;
-    gap: 30px; /* Avstånd mellan mått */
-    margin-left: 10%;
+    gap: 10px; /* Avstånd mellan mått */
+    margin-left: 30%;
 }
 
 /* Knappar till höger */
@@ -192,7 +211,7 @@ h1 {
 }
 
 
-}
+
 .btnDiv {
     display: flex;
     gap: 10px;
