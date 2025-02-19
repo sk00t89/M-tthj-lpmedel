@@ -1,9 +1,10 @@
+/* Generella stilregler */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -13,15 +14,19 @@ body {
     height: 100vh;
     font-family: 'Arial', sans-serif;
 }
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
+
 .select-menu {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
+
+/* Formulär */
 .inputform {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Två kolumner */
@@ -31,17 +36,18 @@ h1 {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
+
 .input-group {
     display: flex;
     flex-direction: column;
 }
+
 .input-group label {
     font-weight: bold;
     margin-bottom: 0.5rem;
-
 }
+
 .inputform input {
     border: 2px solid darkslategrey;
     border-radius: 5px;
@@ -49,6 +55,119 @@ h1 {
     text-align: center;
     width: 100%;
     padding: 0.5rem;
+}
+
+/* Färger för måtten */
+.index {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 30px;
+    text-align: center;
+}
+
+
+.tak {
+    color: blue;
+    font-weight: bold;
+}
+
+.vVägg {
+    color: green;
+    font-weight: bold;
+}
+.hVägg {
+    color: #1d595c;
+    font-weight: bold;
+}
+
+.botten {
+    color: red;
+    font-weight: bold;
+}
+
+.mått {
+    color: black;
+    font-weight: bold;
+}
+
+/* Färger för input */
+#takmått, #vänster-vägg, #höger-vägg, #botten {
+    background-color: rgba(0, 0, 255, 0.1); /* Ljusblå för takmått */
+    border-color: blue;
+}
+
+#vänster-vägg {
+    background-color: rgba(0, 255, 0, 0.1); /* Ljusgrön för vänster vägg */
+    border-color: green;
+}
+
+#höger-vägg {
+    background-color: rgba(0, 255, 255, 0.1); /* Ljuscyan för höger vägg */
+    border-color: cyan;
+}
+
+#botten {
+    background-color: rgba(255, 0, 0, 0.1); /* Ljusröd för botten */
+    border-color: red;
+}
+
+
+
+.måttLista li {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.måttLista .left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Skapar avstånd mellan checkbox och index */
+    min-width: 60px; /* Förhindrar att de hoppar runt */
+}
+.mått-container {
+    flex: 1; /* Tar upp all plats mellan vänster och höger */
+    text-align: right;
+    display: flex;
+    gap: 30px; /* Avstånd mellan mått */
+    margin-left: 10%;
+}
+
+/* Knappar till höger */
+.right-section {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 100px; /* För att knappen inte ska hoppa runt */
+}
+
+
+
+
+.måttLista input {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+.remove-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Media query */
+@media only screen and (max-width: 600px) {
+    .inputform {
+        grid-template-columns: 1fr;
+    }
 }
 .btnDiv {
     display: flex;
@@ -78,45 +197,14 @@ button {
 button:hover {
     opacity: 0.8;
 }
-.måttlista {
-    counter-reset: list-counter;
-    padding-left: 0px;
-}
-.måttlista li {
-    counter-increment: list-counter;
-    text-align: center;
-    display: flex;
-    width: 70vw;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-måttlista li::before {
-    content: counter(list-counter) ". ";
-    font-weight: bold;
-    margin-right: 10px;
-    position: absolute;
-    left: 10px;
-}
-.måttlista input {
-    transform: scale(1.2);
-    margin-right: 10px;
-}
-.remove-btn {
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-}
 
-@media only screen and (max-width: 600px) {
-    .inputform {
-        grid-template-columns: 1fr;
-    }
+
+.kapad {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.5;
+}
+.checkbox {
+    width: 15px;
+    height: 15px;
 }
