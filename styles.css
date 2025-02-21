@@ -1,48 +1,52 @@
 
-    @media only screen and (max-width: 600px) { /* Anpassa för mobil */
-        body {
-            background-color: black; /* Nu fungerar bakgrundsfärgen */
-        }
-
-        .måttLista li {
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
-
-        .mått-container {
-            flex: 1; /* Tar upp all plats mellan vänster och höger */
-            text-align: left;
-            display: flex;
-            flex-wrap: wrap; /* Gör så att elementen bryter rad om det behövs */
-            gap: 5px; /* Avstånd mellan mått */
-        }
-
-        .checkbox {
-            order: -1; /* Flytta checkbox högst upp */
-        }
-
-        .index {
-            order: 0; /* Håll index bredvid checkbox */
-        }
-
-        .mått {
-            width: 100%; /* Låt mått breddas istället för att gå utanför */
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .remove-btn {
-            width: 100%;
-            margin-top: 5px;
-        }
-        .btnDiv {
-            display: flex;
-            gap: 5px;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
+@media only screen and (max-width: 600px) { /* Anpassa för mobil */
+    body {
+        background-color: black; /* Nu fungerar bakgrundsfärgen */
     }
+
+    .måttLista li {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .mått-container {
+        flex: 1; /* Tar upp all plats mellan vänster och höger */
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap; /* Gör så att elementen bryter rad om det behövs */
+        gap: 5px; /* Avstånd mellan mått */
+    }
+    .mått-container p {
+        padding: 5px 0;
+    }
+
+    .checkbox {
+        order: -1; /* Flytta checkbox högst upp */
+    }
+
+    .index {
+        order: 0; /* Håll index bredvid checkbox */
+    }
+
+    .mått {
+        width: 100%; /* Låt mått breddas istället för att gå utanför */
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .remove-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .btnDiv {
+        display: flex;
+        gap: 5px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
 /* Generella stilregler */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -124,7 +128,7 @@ h1 {
     font-weight: bold;
 }
 .hVägg {
-    color: #1d595c;
+    color: purple;
     font-weight: bold;
 }
 
@@ -150,8 +154,8 @@ h1 {
 }
 
 #höger-vägg {
-    background-color: rgba(0, 255, 255, 0.1); /* Ljuscyan för höger vägg */
-    border-color: cyan;
+    background-color: rgba(0, 0, 255, 0.1); /* Ljuscyan för höger vägg */
+    border-color: purple;
 }
 
 #botten {
@@ -177,21 +181,23 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px; /* Skapar avstånd mellan checkbox och index */
-    min-width: 30px; /* Förhindrar att de hoppar runt */
+    min-width: 10px; /* Förhindrar att de hoppar runt */
+    flex-direction: row;
 }
 .mått-container {
     flex: 1; /* Tar upp all plats mellan vänster och höger */
-    text-align: right;
+    text-align: left;
     display: flex;
     gap: 10px; /* Avstånd mellan mått */
-    margin-left: 30%;
+    margin: auto;
+    padding: 0 5px;
 }
 
 /* Knappar till höger */
 .right-section {
     display: flex;
     justify-content: flex-end;
-    min-width: 100px; /* För att knappen inte ska hoppa runt */
+
 }
 
 
