@@ -11,6 +11,7 @@
     <meta name="theme-color" content="#000000">
     <title>Måtthjälpmedel</title>
 </head>
+    
 <body>
 
 <h1>Måtthjälpmedel</h1>
@@ -58,5 +59,10 @@
 </div>
 
 <script src="script.js"></script>
+    <script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log("Service Worker registrerad!"))
+    .catch((error) => console.log("Service Worker misslyckades: ", error));
+}</script>
 </body>
 </html>
